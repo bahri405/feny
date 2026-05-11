@@ -52,7 +52,7 @@ async function loadPortfolioData() {
         initAnimations();
         
     } catch (error) {
-        // console.error("Gagal memuat data:", error);
+        console.error("Gagal memuat data:", error);
     }
 }
 
@@ -122,16 +122,16 @@ function renderExpertise(expertiseData) {
 function renderExperience(experienceData) {
     // console.log("Memulai proses render Experience..."); 
     
-    // const container = document.getElementById('experience-container');
-    // if (!container) {
-    //     console.error("EROR: ID 'experience-container' tidak ditemukan di HTML!");
-    //     return;
-    // }
+    const container = document.getElementById('experience-container');
+    if (!container) {
+        console.error("EROR: ID 'experience-container' tidak ditemukan di HTML!");
+        return;
+    }
 
-    // if (!experienceData || experienceData.length === 0) {
-    //     console.warn("PERINGATAN: Data pengalaman kosong atau tidak terbaca dari Sheets.");
-    //     return;
-    // }
+    if (!experienceData || experienceData.length === 0) {
+        console.warn("PERINGATAN: Data pengalaman kosong atau tidak terbaca dari Sheets.");
+        return;
+    }
 
     let htmlContent = "";
 
