@@ -120,7 +120,7 @@ function renderExpertise(expertiseData) {
 
 // 2. Fungsi Render Experience
 function renderExperience(experienceData) {
-    // console.log("Memulai proses render Experience..."); 
+    console.log("Memulai proses render Experience..."); 
     
     const container = document.getElementById('experience-container');
     if (!container) {
@@ -138,7 +138,7 @@ function renderExperience(experienceData) {
     // Menggunakan FOR Loop Tradisional
     for (let i = 0; i < experienceData.length; i++) {
         const item = experienceData[i];
-        // console.log(`Memproses baris ke-${i}:`, item);
+        console.log(`Memproses baris ke-${i}:`, item);
 
         // Gunakan nilai default jika kolom kosong agar tidak muncul "undefined"
         const tahun = item.tahun || "";
@@ -161,7 +161,7 @@ function renderExperience(experienceData) {
     }
 
     container.innerHTML = htmlContent;
-    // console.log("Render Experience Selesai!");
+    console.log("Render Experience Selesai!");
 }
 
 
