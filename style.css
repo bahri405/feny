@@ -627,13 +627,193 @@
   .modal-tags { display: flex; flex-wrap: wrap; gap: 6px; }
   .modal-tag { font-size: 11px; padding: 4px 11px; border-radius: 8px; background: rgba(196,163,154,0.12); color: var(--rose); }
 
-  @media (max-width: 700px) {
+  /* @media (max-width: 700px) {
     .modal-box { grid-template-columns: 1fr; }
     .modal-img, .modal-img-placeholder { min-height: 220px; }
     .livehost-grid { grid-template-columns: 1fr; }
     .livehost-header { flex-direction: column; align-items: flex-start; }
     .livehost-sub { text-align: left; max-width: 100%; }
+  } */
+
+  /* ───────────────── MOBILE RESPONSIVE ───────────────── */
+@media (max-width: 768px) {
+
+  /* Section */
+  #livehost {
+    padding-inline: 18px;
   }
+
+  .livehost-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 18px;
+    margin-bottom: 32px;
+  }
+
+  .livehost-headline {
+    font-size: clamp(30px, 9vw, 42px);
+    line-height: 1.1;
+  }
+
+  .livehost-sub {
+    max-width: 100%;
+    text-align: left;
+    font-size: 12px;
+    line-height: 1.7;
+  }
+
+  /* Grid */
+  .livehost-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .livehost-grid .lh-card:nth-child(4),
+  .livehost-grid .lh-card:nth-child(5) {
+    grid-column: auto;
+  }
+
+  /* Card */
+  .lh-card {
+    border-radius: 18px;
+  }
+
+  .lh-thumb {
+    aspect-ratio: 16/11;
+  }
+
+  .lh-body {
+    padding: 20px 18px 18px;
+    gap: 8px;
+  }
+
+  .lh-category {
+    font-size: 9px;
+    letter-spacing: 0.08em;
+  }
+
+  .lh-title {
+    font-size: 18px;
+    line-height: 1.25;
+  }
+
+  .lh-excerpt {
+    font-size: 12px;
+    line-height: 1.7;
+    -webkit-line-clamp: 4;
+  }
+
+  .lh-tags {
+    gap: 6px;
+    padding-top: 10px;
+  }
+
+  .lh-tag {
+    font-size: 10px;
+    padding: 4px 10px;
+  }
+
+  .lh-cta {
+    margin-top: 14px;
+    padding-top: 14px;
+    font-size: 12px;
+  }
+
+  /* Brand pill */
+  .lh-brand-pill {
+    top: 12px;
+    left: 12px;
+    font-size: 10px;
+    padding: 5px 10px;
+  }
+
+  /* Modal */
+  .modal-overlay {
+    padding: 14px;
+    align-items: flex-end;
+  }
+
+  .modal-box {
+    grid-template-columns: 1fr;
+    border-radius: 22px 22px 0 0;
+    max-height: 92vh;
+    overflow-y: auto;
+  }
+
+  .modal-img,
+  .modal-img-placeholder {
+    min-height: 220px;
+    max-height: 260px;
+  }
+
+  .modal-content {
+    padding: 26px 20px 24px;
+    gap: 14px;
+  }
+
+  .modal-title {
+    font-size: 24px;
+    line-height: 1.15;
+  }
+
+  .modal-desc {
+    font-size: 13px;
+    line-height: 1.8;
+  }
+
+  .modal-stats {
+    gap: 18px;
+  }
+
+  .modal-stat-val {
+    font-size: 20px;
+  }
+
+  .modal-close {
+    top: 12px;
+    right: 12px;
+    width: 34px;
+    height: 34px;
+  }
+
+  .modal-tags {
+    gap: 7px;
+  }
+
+  .modal-tag {
+    font-size: 10px;
+  }
+
+}
+
+/* EXTRA SMALL DEVICES */
+@media (max-width: 480px) {
+
+  #livehost {
+    padding-inline: 14px;
+  }
+
+  .livehost-headline {
+    font-size: 32px;
+  }
+
+  .lh-body {
+    padding: 18px 16px;
+  }
+
+  .lh-title {
+    font-size: 17px;
+  }
+
+  .modal-title {
+    font-size: 21px;
+  }
+
+  .modal-content {
+    padding: 22px 18px;
+  }
+
+}
 
   
 
